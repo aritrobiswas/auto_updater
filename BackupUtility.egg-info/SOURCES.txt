@@ -1,0 +1,11 @@
+MANIFEST.in
+README.txt
+setup.py
+BackupUtility.egg-info/PKG-INFO
+BackupUtility.egg-info/SOURCES.txt
+BackupUtility.egg-info/dependency_links.txt
+BackupUtility.egg-info/top_level.txt
+backup/__init__.py
+backup/auto_updater.py
+backup/set_cron_job.py
+backup/scripts/backuputil

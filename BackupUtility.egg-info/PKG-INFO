@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: BackupUtility
+Version: 0.1.0
+Summary: automatically backs up specified directories to specified gcs buckets on specified times
+Home-page: UNKNOWN
+Author: Aritro Biswas
+Author-email: aritro@celectengine.com
+License: LICENSE.txt
+Description: UNKNOWN
+Platform: UNKNOWN

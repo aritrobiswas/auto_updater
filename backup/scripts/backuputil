@@ -11,7 +11,7 @@ def parse_options(argv):
                                   help="bucket - the cloud bucket to back up to", default=None)
 		parser.add_option("-t", "--time_fields", dest="bucket",
                                   help="time_fields - specifies when to back up files", default=None)
-        parser.add_option("-f", "--time_fn", dest="fn",
+        parser.add_option("-f", "--fn", dest="fn",
                                   help="fn - if  equal to 'j' then sets cron job,, if 'n' then doesn't", default=None)
         (options, args) = parser.parse_args(argv)
         return options.backup_dir, options.bucket, option.time_fields, option.fn

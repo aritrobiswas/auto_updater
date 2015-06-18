@@ -1,5 +1,24 @@
 #!/usr/bin/python
- 
+import auto_updater,set_cron_job
+import sys
+from optparse import OptionParser
+
+def parse_options(argv):
+        parser = OptionParser()
+        parser.add_option("-p", "--backup_dir", dest="backup_dir",
+                                  help="backup_dir - the directory to back up", default=None)
+        parser.add_option("-b", "--bucket", dest="bucket",
+                                  help="bucket - the cloud bucket to back up to", default=None)
+		parser.add_option("-t", "--time_fields", dest="bucket",
+                                  help="time_fields - specifies when to back up files", default=None)
+        parser.add_option("-f", "--fn", dest="fn",
+                                  help="fn - if  equal to 'j' then sets cron job,, if 'n' then doesn't", default=None)
+        (options, args) = parser.parse_args(argv)
+        return options.backup_dir, options.bucket, option.time_fields, option.fn
+
 if __name__ == "__main__":
-	print 'Hello, world'
-	pass
+	backup_dir, bucket, time_fields, fn = parse_options(sys.argv)
+	if fn == 'j':
+		set_cron_job.set_cron_job(time_fields,backup_dir,bucket)
+	elif fn == 'n':
+		auto_updater.backup_files(backup_dir,bucket)

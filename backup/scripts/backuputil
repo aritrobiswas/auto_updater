@@ -9,7 +9,7 @@ def parse_options(argv):
                                   help="backup_dir - the directory to back up", default=None)
         parser.add_option("-b", "--bucket", dest="bucket",
                                   help="bucket - the cloud bucket to back up to", default=None)
-		parser.add_option("-t", "--time_fields", dest="bucket",
+        parser.add_option("-t", "--time_fields", dest="bucket",
                                   help="time_fields - specifies when to back up files", default=None)
         parser.add_option("-f", "--fn", dest="fn",
                                   help="fn - if  equal to 'j' then sets cron job,, if 'n' then doesn't", default=None)

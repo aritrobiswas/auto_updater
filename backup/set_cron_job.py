@@ -9,7 +9,7 @@ def set_cron_job(backup_time,backup_dir,cloud_loc):
         """
         os.system("sudo touch cron_container.txt")
         os.system("crontab -l > cron_container.txt")
-        crontab_cmd = backup_time + " sudo backuputil -p " + backup_dir + " -b " + cloud_loc
+        crontab_cmd = backup_time + ' sudo backuputil -p "' + backup_dir + '" -b "' + cloud_loc + ' -f "n"'
         os.system('echo "' + crontab_cmd + '" >> cron_container.txt')
         os.system("crontab cron_container.txt")
         os.system("rm cron_container.txt")

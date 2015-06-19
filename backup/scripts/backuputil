@@ -1,5 +1,5 @@
 #!/usr/bin/python
-import auto_updater,set_cron_job
+#import auto_updater,set_cron_job
 import sys
 from optparse import OptionParser
 

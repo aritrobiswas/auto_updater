@@ -14,7 +14,7 @@ def parse_options(argv):
         parser.add_option("-f", "--fn", dest="fn",
                                   help="fn - if  equal to 'j' then sets cron job,, if 'n' then doesn't", default=None)
         (options, args) = parser.parse_args(argv)
-        return options.backup_dir, options.bucket, option.time_fields, option.fn
+        return options.backup_dir, options.bucket, options.time_fields, options.fn
 
 if __name__ == "__main__":
 	backup_dir, bucket, time_fields, fn = parse_options(sys.argv)
